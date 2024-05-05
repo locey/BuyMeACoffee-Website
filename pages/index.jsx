@@ -6,7 +6,7 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   // Contract Address & ABI
-  const contractAddress = "0xDBa03676a2fBb6711CB652beF5B7416A53c1421D";
+  const contractAddress = "0x311CBCF441fe0f9C9d7c37cdE7c173ad32b58d03";
   const contractABI = abi.abi;
 
   // Component state
@@ -166,20 +166,20 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Buy Albert a Coffee!</title>
+        <title>Buy locey a Coffee!</title>
         <meta name="description" content="Tipping site" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Buy Albert a Coffee!
+          Buy locey a Coffee!
         </h1>
         
         {currentAccount ? (
           <div>
             <form>
-              <div class="formgroup">
+              <div className="formgroup">
                 <label>
                   Name
                 </label>
@@ -193,9 +193,9 @@ export default function Home() {
                   />
               </div>
               <br/>
-              <div class="formgroup">
+              <div className="formgroup">
                 <label>
-                  Send Albert a message
+                  Send locey a message
                 </label>
                 <br/>
 
@@ -228,7 +228,7 @@ export default function Home() {
       {currentAccount && (memos.map((memo, idx) => {
         return (
           <div key={idx} style={{border:"2px solid", "border-radius":"5px", padding: "5px", margin: "5px"}}>
-            <p style={{"font-weight":"bold"}}>"{memo.message}"</p>
+            <p style={{ fontWeight: "bold" }}>{memo.message}</p>
             <p>From: {memo.name} at {memo.timestamp.toString()}</p>
           </div>
         )
@@ -240,7 +240,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Created by @thatguyintech for Alchemy's Road to Web3 lesson two!
+          <p>Created by @thatguyintech for Alchemy&apos;s Road to Web3 lesson two!</p>
         </a>
       </footer>
     </div>
